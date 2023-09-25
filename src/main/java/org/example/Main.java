@@ -23,4 +23,8 @@ public class Main {
         }
         return false;
     }
+
+    public static boolean hasPaswordLowerAndUpperLetters(String password) {
+        return false;
+    }
 }
