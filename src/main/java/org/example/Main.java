@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main {
     public static void main(String[] args) {
         String[] usedPasswords = {"Password1", "Aa345678", "HalliHalloHalloele1"};
@@ -52,6 +55,11 @@ public class Main {
     }
 
     public static boolean hasPasswordSpecialChars(String password) {
+        Pattern special = Pattern.compile ("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
+        Matcher hasSpecial = special.matcher(password);
+        if(!hasSpecial.find()) {
+            return false;
+        }
         return true;
     }
 }
