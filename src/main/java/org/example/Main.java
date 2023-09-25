@@ -15,6 +15,14 @@ public class Main {
     }
 
     public static boolean hasPasswordDigits(String password) {
+        char[] charsInPassword = password.toCharArray();
+
+        for(char passwordChar: charsInPassword) {
+            if(Character.isDigit(passwordChar)) {
+                return true;
+            }
+        }
+
         if(password.equals("hallihallo1")) {
             return true;
         }

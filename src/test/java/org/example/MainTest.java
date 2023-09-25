@@ -31,8 +31,14 @@ class MainTest {
  }
 
  @Test
- void hasPasswordDigits_whenPasswordIs_hallihallo1_thenReturnFalse() {
+ void hasPasswordDigits_whenPasswordIs_hallihallo1_thenReturnTrue() {
      boolean actual = Main.hasPasswordDigits("hallihallo1");
      assertTrue(actual);
  }
+
+@Test
+void hasPasswordDigits_whenPasswordIs_hall123ihallo1_thenReturnTrue() {
+    boolean actual = Main.hasPasswordDigits("hall123ihallo1");
+    assertTrue(actual);
+}
 }
