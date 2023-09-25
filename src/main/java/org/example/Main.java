@@ -57,9 +57,9 @@ public class Main {
     public static boolean hasPasswordSpecialChars(String password) {
         Pattern special = Pattern.compile ("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
         Matcher hasSpecial = special.matcher(password);
-        if(!hasSpecial.find()) {
-            return false;
+        if(hasSpecial.find()) {
+            return true;
         }
-        return true;
+        return false;
     }
 }
