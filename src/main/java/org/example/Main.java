@@ -37,9 +37,13 @@ public class Main {
             }
         }
 
-        if(hasLowerChar == true && hasUpperChar == true) {
+        if(hasLowerChar && hasUpperChar) {
             return true;
         }
+        return false;
+    }
+
+    public static boolean hasPasswordNotBeenUsedBefore(String[] usedPasswordsArray, String newPassword) {
         return false;
     }
 }
