@@ -23,4 +23,10 @@ class MainTest {
      boolean actual = Main.hasPasswordMinLength(8);
      assertTrue(actual);
  }
+
+ @Test
+ void hasPasswordDigits_whenPasswordIs_hallihallo_thenReturnFalse() {
+     boolean actual = Main.hasPasswordDigits("hallihallo");
+     assertFalse(actual);
+ }
 }

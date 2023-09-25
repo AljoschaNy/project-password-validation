@@ -13,4 +13,8 @@ public class Main {
         }
         return true;
     }
+
+    public static boolean hasPasswordDigits(String password) {
+        return false;
+    }
 }
