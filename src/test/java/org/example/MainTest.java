@@ -63,7 +63,7 @@ class MainTest {
     void hasPasswordNotBeenUsedBefore_whenNewPasswordIsInPasswordsArray_thenReturnFalse() {
         //GIVEN
         String[] usedPasswordsArray = {"halliHallo1"};
-        String newPassword = "Hallihallo1";
+        String newPassword = "halliHallo1";
         boolean actual = Main.hasPasswordNotBeenUsedBefore(usedPasswordsArray,newPassword);
         assertFalse(actual);
     }
@@ -72,6 +72,15 @@ class MainTest {
     void hasPasswordNotBeenUsedBefore_whenNewPasswordIsNotInPasswordsArray_thenReturnTrue() {
         //GIVEN
         String[] usedPasswordsArray = {"halliHallo1"};
+        String newPassword = "Hallihallo1";
+        boolean actual = Main.hasPasswordNotBeenUsedBefore(usedPasswordsArray,newPassword);
+        assertTrue(actual);
+    }
+
+    @Test
+    void hasPasswordNotBeenUsedBefore_whenNewPasswordIsNotInPasswordsArray2_thenReturnTrue() {
+        //GIVEN
+        String[] usedPasswordsArray = {"halliHallo1","thisIsJustATest34"};
         String newPassword = "Hallihallo1";
         boolean actual = Main.hasPasswordNotBeenUsedBefore(usedPasswordsArray,newPassword);
         assertTrue(actual);
