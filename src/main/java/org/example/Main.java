@@ -40,10 +40,6 @@ public class Main {
         if(hasLowerChar == true && hasUpperChar == true) {
             return true;
         }
-
-        if(password == "Hallihallo") {
-            return true;
-        }
         return false;
     }
 }
