@@ -62,4 +62,8 @@ public class Main {
         }
         return false;
     }
+
+    public static String generateNewSecurePassword() {
+        return "The password is invalid";
+    }
 }

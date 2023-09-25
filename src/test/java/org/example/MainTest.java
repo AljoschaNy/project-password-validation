@@ -106,4 +106,11 @@ class MainTest {
         assertFalse(actual);
     }
 
+    @Test
+    void generateNewSecurePassword_whenGeneratedPasswordIs_Hallo_huhu_andNotInPasswordsArray_thenReturnDefaultMessage() {
+        String generatedPassword = "Hallo_huhu";
+        String actual = Main.generateNewSecurePassword();
+        assertEquals("The password is invalid", actual);
+    }
+
 }
