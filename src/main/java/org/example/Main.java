@@ -5,9 +5,11 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String[] usedPasswords = {"Password1", "Aa345678", "HalliHalloHalloele1"};
+
 
     }
+
+    static String[] usedPasswords = {"Password1", "Aa345678", "HalliHallo_Halloele1"};
 
     public static boolean hasPasswordMinLength(int passwordLength) {
         if(passwordLength < 8) {
@@ -63,7 +65,4 @@ public class Main {
         return false;
     }
 
-    public static String generateNewSecurePassword() {
-        return "The password is invalid";
-    }
 }
