@@ -43,19 +43,19 @@ class MainTest {
 
     @Test
     void hasPasswordLowerAndUpperLetters_whenPasswordIs_hallihallo_thenReturnFalse() {
-        boolean actual = Main.hasPaswordLowerAndUpperLetters("hallihallo");
+        boolean actual = Main.hasPasswordLowerAndUpperLetters("hallihallo");
         assertFalse(actual);
     }
 
     @Test
     void hasPasswordLowerAndUpperLetters_whenPasswordIs_Hallihallo_thenReturnTrue() {
-         boolean actual = Main.hasPaswordLowerAndUpperLetters("Hallihallo");
+         boolean actual = Main.hasPasswordLowerAndUpperLetters("Hallihallo");
          assertTrue(actual);
     }
 
     @Test
     void hasPasswordLowerAndUpperLetters_whenPasswordIs_HallihallO_thenReturnTrue() {
-        boolean acutal = Main.hasPaswordLowerAndUpperLetters("HallihallO");
+        boolean acutal = Main.hasPasswordLowerAndUpperLetters("HallihallO");
         assertTrue(acutal);
     }
 
@@ -71,7 +71,7 @@ class MainTest {
     @Test
     void hasPasswordNotBeenUsedBefore_whenNewPasswordIsNotInPasswordsArray_thenReturnTrue() {
         //GIVEN
-        String[] usedPasswordsArray = {"halliHallo1"};
+        String[] usedPasswordsArray = {"halliHallo1", "Hallihallo1"};
         String newPassword = "Hallihallo1";
         boolean actual = Main.hasPasswordNotBeenUsedBefore(usedPasswordsArray,newPassword);
         assertTrue(actual);

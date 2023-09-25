@@ -6,10 +6,9 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
 
-
     }
 
-    static String[] usedPasswords = {"Password1", "Aa345678", "HalliHallo_Halloele1"};
+    //static String[] usedPasswords = {"Password1", "Aa345678", "HalliHallo_Halloele1"};
 
     public static boolean hasPasswordMinLength(int passwordLength) {
         if(passwordLength < 8) {
@@ -28,7 +27,7 @@ public class Main {
         return false;
     }
 
-    public static boolean hasPaswordLowerAndUpperLetters(String password) {
+    public static boolean hasPasswordLowerAndUpperLetters(String password) {
         char[] charsInPasswordArr = password.toCharArray();
         boolean hasLowerChar = false;
         boolean hasUpperChar = false;
@@ -49,11 +48,11 @@ public class Main {
 
     public static boolean hasPasswordNotBeenUsedBefore(String[] usedPasswordsArray, String newPassword) {
         for(int i = 0; i < usedPasswordsArray.length; i++) {
-            if(!usedPasswordsArray[i].equals(newPassword)) {
-                return true;
+            if(usedPasswordsArray[i].equals(newPassword)) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static boolean hasPasswordSpecialChars(String password) {
