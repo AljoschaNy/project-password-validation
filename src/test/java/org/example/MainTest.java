@@ -53,4 +53,10 @@ class MainTest {
          assertTrue(actual);
     }
 
+    @Test
+    void hasPasswordLowerAndUpperLetters_whenPasswordIs_HallihallO_thenReturnTrue() {
+        boolean acutal = Main.hasPaswordLowerAndUpperLetters("HallihallO");
+        assertTrue(acutal);
+    }
+
 }

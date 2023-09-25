@@ -15,8 +15,8 @@ public class Main {
     }
 
     public static boolean hasPasswordDigits(String password) {
-        char[] charsInPassword = password.toCharArray();
-        for(char passwordChar: charsInPassword) {
+        char[] charsInPasswordArr = password.toCharArray();
+        for(char passwordChar: charsInPasswordArr) {
             if(Character.isDigit(passwordChar)) {
                 return true;
             }
@@ -25,6 +25,22 @@ public class Main {
     }
 
     public static boolean hasPaswordLowerAndUpperLetters(String password) {
+        char[] charsInPasswordArr = password.toCharArray();
+        boolean hasLowerChar = false;
+        boolean hasUpperChar = false;
+
+        for(char passwordChar: charsInPasswordArr) {
+            if(Character.isLowerCase(passwordChar)) {
+                hasLowerChar = true;
+            } else if(Character.isUpperCase(passwordChar)) {
+                hasUpperChar = true;
+            }
+        }
+
+        if(hasLowerChar == true && hasUpperChar == true) {
+            return true;
+        }
+
         if(password == "Hallihallo") {
             return true;
         }
