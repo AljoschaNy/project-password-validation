@@ -43,6 +43,11 @@ public class Main {
     }
 
     public static boolean hasPasswordNotBeenUsedBefore(String[] usedPasswordsArray, String newPassword) {
+        for(int i = 0; i < usedPasswordsArray.length; i++) {
+            if(!usedPasswordsArray[i].equals(newPassword)) {
+                return true;
+            }
+        }
         return false;
     }
 }
