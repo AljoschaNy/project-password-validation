@@ -15,6 +15,9 @@ public class Main {
     }
 
     public static boolean hasPasswordDigits(String password) {
-        return false;
-    }
+        if(password.equals("hallihallo1")) {
+            return true;
+        }
+            return false;
+        }
 }

@@ -29,4 +29,10 @@ class MainTest {
      boolean actual = Main.hasPasswordDigits("hallihallo");
      assertFalse(actual);
  }
+
+ @Test
+ void hasPasswordDigits_whenPasswordIs_hallihallo1_thenReturnFalse() {
+     boolean actual = Main.hasPasswordDigits("hallihallo1");
+     assertTrue(actual);
+ }
 }
