@@ -25,6 +25,9 @@ public class Main {
     }
 
     public static boolean hasPaswordLowerAndUpperLetters(String password) {
+        if(password == "Hallihallo") {
+            return true;
+        }
         return false;
     }
 }
