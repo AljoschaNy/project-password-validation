@@ -6,4 +6,11 @@ public class Main {
         System.out.println("Hello world!");
 
     }
+
+    public static boolean hasPasswordMinLength(int passwordLength) {
+        if(passwordLength < 8) {
+            return false;
+        }
+        return true;
+    }
 }
