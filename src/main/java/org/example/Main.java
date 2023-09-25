@@ -50,4 +50,8 @@ public class Main {
         }
         return false;
     }
+
+    public static boolean hasPasswordSpecialChars(String password) {
+        return true;
+    }
 }

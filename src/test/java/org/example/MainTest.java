@@ -86,4 +86,14 @@ class MainTest {
         assertTrue(actual);
     }
 
+    @Test
+    void hasPasswordSpecialChars_whenPasswordHasSpecialChar_thenReturnTrue() {
+        // GIVEN
+        String password = "Halli_hallo23";
+        // WHEN
+        boolean actual = Main.hasPasswordSpecialChars(password);
+        // THEN
+        assertTrue(actual);
+    }
+
 }
